@@ -22,7 +22,7 @@ class _HomeState extends State<Home> {
     'Imagine uma nova história para a sua vida e acredite nela'
   ];
 
-  void _GerarFrase() {
+  void _gerarFrase() {
     int _fraseSorteada;
 
     _fraseSorteada = Random().nextInt(_frases.length);
@@ -57,17 +57,15 @@ class _HomeState extends State<Home> {
                     fontWeight: FontWeight.bold,
                     color: Colors.black),
               ),
-              RaisedButton(
+              ElevatedButton(
                 child: Text(
-                  'Nova Frase',
-                  style: TextStyle(
+                  'Nova Frase'),
+                  style: ElevatedButton.styleFrom(textStyle: TextStyle(
                       fontSize: 25,
                       color: Colors.white,
-                      fontWeight: FontWeight.bold),
-                ),
-                color: Colors.green,
+                      fontWeight: FontWeight.bold)),
                 onPressed: () {
-                  _GerarFrase();
+                  _gerarFrase();
                   Home();
                 },
               )
